@@ -10,8 +10,8 @@ export default function Welcome() {
       <div className={styles.welcome}>
         <div className={`${styles.welcomeWrap} lg:max-w-2xl xl:max-w-3xl`}>
           <div className={styles.welcomeText}>
-            <h1>Welcome Kehinde!</h1>
-            <p>Start a new chat or select an existing one to continue</p>
+            <h1>Welcome!</h1>
+            <p>Start a new chat</p>
           </div>
           <div className={styles.wGrid}>
             <div className={styles.column}>

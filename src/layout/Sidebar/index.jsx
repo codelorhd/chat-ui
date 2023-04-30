@@ -44,14 +44,14 @@ export default function Sidebar(props) {
               <a className={`${styles.thread} gap-3`} href="#0">
                 <Icons.Chat />
                 <div className="max-w-[85%] text-sm text-ellipsis overflow-hidden whitespace-nowrap">
-                  Increase text sisssze.
+                  Previous Chat 1
                 </div>
               </a>
 
               <a className={`${styles.thread} gap-3`} href="#0">
                 <Icons.Chat />
                 <div className="max-w-[85%] text-sm text-ellipsis overflow-hidden whitespace-nowrap">
-                  Playing around with this guy herwwwwwwwwwwe.
+                  Previous Chat 2
                 </div>
               </a>
             </div>
@@ -63,7 +63,7 @@ export default function Sidebar(props) {
               className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#343541] rounded-md flex items-center"
             >
               <Icons.User />
-              Settings
+                Settings
             </a>
             {/* */}
             <button
@@ -71,7 +71,7 @@ export default function Sidebar(props) {
               className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#343541] rounded-md flex items-center"
             >
               <Icons.Settings />
-              Kehinde Omopariola
+              User
             </button>
           </div>
         </nav>

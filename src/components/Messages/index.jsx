@@ -13,7 +13,7 @@ const Message = ({ message }) => {
           <div className={`${styles.questionWrap} lg:max-w-2xl xl:max-w-3xl`}>
             <div className={styles.pfp}>
               <img
-                src="https://chat.openai.com/_next/image?url=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAGNmyxYqlDKnm8TQIFC_7a4W-CtgZ3pprdirwON7eNzcvw%3Ds96-c&w=96&q=75"
+                src="/favicon.ico"
                 alt="user pfp"
               />
             </div>
@@ -25,7 +25,7 @@ const Message = ({ message }) => {
           <div className={`${styles.answerWrap} lg:max-w-2xl xl:max-w-3xl`}>
             <div className={styles.pfp}>
               <img
-                src="https://chat.openai.com/_next/image?url=https%3A%2F%2Flh3.googleusercontent.com%2Fa%2FAGNmyxYqlDKnm8TQIFC_7a4W-CtgZ3pprdirwON7eNzcvw%3Ds96-c&w=96&q=75"
+                src="/model.svg"
                 alt="user pfp"
               />
             </div>
