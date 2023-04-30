@@ -15,8 +15,9 @@ export default function ChatLayout(props) {
     <div
       className={`${styles.chatLayout} overflow-hidden w-[100vw] h-[100vh] relative`}
     >
-      <Sidebar onNewChat={props.onNewChat} />
-      <div className="flex h-[100vh] max-w-[100vw] pl-[18%]">
+      {/* <Sidebar onNewChat={props.onNewChat} /> */}
+      <div className="flex">
+      {/* <div className="flex h-[100vh] max-w-[100vw] pl-[18%] "> */}
         <main className={`${styles.chatArena} relative h-[100vh] w-[100vw]`}>
           {props.children}
         </main>
