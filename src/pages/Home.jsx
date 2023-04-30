@@ -6,9 +6,6 @@ import { Outlet, useNavigate, useParams } from 'react-router-dom';
 import ChatLayout from '../layout/ChatLayout';
 import ChatArena from '../components/Chat';
 
-// Pages
-// import NewChat from './NewChat';
-
 // Components
 import Form from '../components/Form';
 
@@ -20,39 +17,33 @@ export default function Home() {
   const messageRef = useRef(null);
 
   const handleSubmit = (message) => {
-    setMessages([
-      ...messages,
-      {
-        id: messages.length + 1,
-        answer: (
-          <>
-            <p>
-              To convert this linear gradient to hex code, we need to first
-              break it down into its individual color components. The gradient
-              consists of two colors: rgba(38, 192, 228, 0) and #3a82d7.
-            </p>{' '}
-            <br />
-            <p>
-              The first color, rgba(38, 192, 228, 0), is a transparent color
-              with an RGB value of (38, 192, 228) and an alpha value of 0. This
-              means that the color is fully transparent.{' '}
-            </p>
-            <br />
-            <p>
-              The second color, #3a82d7, is a solid color with an RGB value of
-              (58, 130, 215).{' '}
-            </p>
-            <br />
-            <p>
-              Now, to convert the linear gradient to hex code, we need to find
-              the midpoint of the gradient. This can be done by taking the
-              average of the two RGB values:
-            </p>
-          </>
-        ),
-        message,
-      },
-    ]);
+    const newMessage = {
+      id: messages.length + 1,
+      answer: '',
+      message,
+    };
+    setMessages([...messages, newMessage]);
+
+    const answerText = "Benin Republic, officially known as the Republic of Benin, is a country located in West Africa. Its history is rich and varied, with a unique blend of ancient cultures and modern influences. The region that is now known as Benin was once part of the powerful Dahomey Kingdom, which was one of the most important states in West Africa in the 19th century. The kingdom was known for its military might, sophisticated political system, and its tradition of human sacrifice."; // Replace with your answer content
+    const typingSpeed = 15;
+    let index = 0;
+
+    const typeText = () => {
+      if (index < answerText.length) {
+        newMessage.answer += answerText.charAt(index);
+        setMessages([...messages, newMessage]);
+        setTimeout(typeText, getRandomDelay());
+        index++;
+      }
+    };
+
+    function getRandomDelay() {
+      const minDelay = typingSpeed - 50;
+      const maxDelay = typingSpeed + 50;
+      return Math.random() * (maxDelay - minDelay) + minDelay;
+    }
+
+    typeText();
   };
 
   useEffect(() => {
@@ -66,6 +57,7 @@ export default function Home() {
     const id = shortid.generate();
     navigate(`/chat/${id}`);
   };
+
   return (
     <>
       <ChatLayout onNewChat={generateNewChat}>

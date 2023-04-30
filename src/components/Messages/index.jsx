@@ -29,8 +29,11 @@ const Message = ({ message }) => {
                 alt="user pfp"
               />
             </div>
-            <div className={styles.ansText}>{answer}</div>
+          
+            <div
+            className={styles.ansText}>{answer}</div>
           </div>
+
         </div>
       </div>
     </div>
