@@ -31,7 +31,7 @@
         width: 8px;
 
         &-thumb {
-          background-color: #343541;
+          background-color: #ffffff;
           border-radius: 10px;
 
           &:hover {
@@ -53,15 +53,15 @@
         padding: 12px;
 
         &.active {
-          background-color: #343541;
+          background-color: #ffffff;
         }
 
         &:hover {
-          background-color: #343541;
+          background-color: #ffffff;
         }
 
         &:first-child {
-          background-color: #343541;
+          background-color: #ffffff;
         }
       }
     }

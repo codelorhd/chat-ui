@@ -60,7 +60,7 @@ export default function Sidebar(props) {
           <div className={`${styles.bottom} p-2 pt-4 bg-[#202123]`}>
             <a
               href="#0"
-              className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#343541] rounded-md flex items-center"
+              className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#ffffff] rounded-md flex items-center"
             >
               <Icons.User />
                 Settings
@@ -68,7 +68,7 @@ export default function Sidebar(props) {
             {/* */}
             <button
               href="#0"
-              className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#343541] rounded-md flex items-center"
+              className="w-full flex py-3 px-3 items-center gap-3 transition-colors duration-200 text-white cursor-pointer text-sm hover:bg-[#ffffff] rounded-md flex items-center"
             >
               <Icons.Settings />
               User
