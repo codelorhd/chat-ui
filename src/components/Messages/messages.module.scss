@@ -88,9 +88,8 @@
         & .ansText {
           color: #000;
           margin-top: 4px;
-          padding-right: 10%;
           width: 100%;
-          max-width: 90%;
+          max-width: 100%;
 
           & p {
             font-size: 16px;
@@ -100,6 +99,29 @@
           }
         }
       }
+
+
+      /* Add these new styles to the existing CSS */
+      .feedback {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .thumbsUp,
+      .thumbsDown {
+        background-color: transparent;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      .thumbsUp:focus,
+      .thumbsDown:focus {
+        outline: none;
+      }
+
     }
   }
 }

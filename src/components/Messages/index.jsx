@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 // Styles
 import styles from './messages.module.scss';
 
-const Message = ({ message }) => {
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+
+
+const Message = ({ message, typingCompleted }) => {
   const { message: question, answer } = message;
 
   return (
@@ -33,6 +37,17 @@ const Message = ({ message }) => {
             <div
             className={styles.ansText}>{answer}</div>
           </div>
+                    
+      {typingCompleted && (
+        <div className={styles.feedback}>
+          <button className={styles.thumbsUp}>
+            <FontAwesomeIcon icon={faThumbsUp} />
+          </button>
+          <button className={styles.thumbsDown}>
+            <FontAwesomeIcon icon={faThumbsDown} />
+          </button>
+        </div>
+      )}
 
         </div>
       </div>

@@ -16,6 +16,8 @@ export default function Home() {
   const [messages, setMessages] = useState([]);
   const messageRef = useRef(null);
 
+  const [typingCompleted, setTypingCompleted] = useState(false);
+
   const handleSubmit = (message) => {
     const newMessage = {
       id: messages.length + 1,
@@ -29,12 +31,16 @@ export default function Home() {
     let index = 0;
 
     const typeText = () => {
+  
       if (index < answerText.length) {
         newMessage.answer += answerText.charAt(index);
         setMessages([...messages, newMessage]);
         setTimeout(typeText, getRandomDelay());
         index++;
+      } else {
+        setTypingCompleted(true);
       }
+
     };
 
     function getRandomDelay() {
@@ -61,8 +67,7 @@ export default function Home() {
   return (
     <>
       <ChatLayout onNewChat={generateNewChat}>
-        <ChatArena messages={messages} messageRef={messageRef} />
-        <Form onSubmit={handleSubmit} />
+        <ChatArena messages={messages} messageRef={messageRef} typingCompleted={typingCompleted} />
       </ChatLayout>
     </>
   );

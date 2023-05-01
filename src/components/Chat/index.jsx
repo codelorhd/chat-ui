@@ -17,7 +17,7 @@ ChatArena.propTypes = {
   messageRef: PropTypes.any.isRequired,
 };
 
-export default function ChatArena({ messages, messageRef }) {
+export default function ChatArena({ messages, messageRef, typingCompleted }) {
   return (
     <>
       <div className={styles.chatArea}>
@@ -25,7 +25,7 @@ export default function ChatArena({ messages, messageRef }) {
           <Welcome />
         ) : (
           messages.map((message) => (
-            <Message key={message.id} message={message} />
+            <Message key={message.id} message={message} typingCompleted={typingCompleted} />
           ))
         )}
         <div ref={messageRef} />
