@@ -21,6 +21,10 @@ export default function ChatArena({ messages, messageRef, typingCompleted }) {
   return (
     <>
       <div className={styles.chatArea}>
+
+    <div className={styles.blueBanner}>
+      <img src="logo.png" alt="" />
+    </div>
         {messages.length === 0 ? (
           <Welcome />
         ) : (
